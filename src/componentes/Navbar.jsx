@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { navbarLinks } from '../data/data';
 import { CiSearch } from "react-icons/ci";
-import { ImBooks } from "react-icons/im"; // Reutilizamos este icono para el Banner
+import { ImBooks } from "react-icons/im"; 
 import { MdMenu } from "react-icons/md";
 import { PiShoppingCartLight } from "react-icons/pi";
 import MenuResponsivo from "./MenuResponsivo";
@@ -74,10 +74,6 @@ const Navbar = () => {
 
             {/* Menú Responsivo */}
             <MenuResponsivo open={abierto} navbarLinks={navbarLinks} />
-
-            {/* ------------------------------------------------------ */}
-            {/* SECCIÓN DE BANNER (Integrada en el mismo documento)    */}
-            {/* ------------------------------------------------------ */}
             <section className="bg-gray-50 py-12 md:py-24">
                 <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     
@@ -112,8 +108,6 @@ const Navbar = () => {
                             </button>
                         </motion.div>
                     </div>
-
-                    {/* Imagen/Icono del Banner */}
                     <div className="flex justify-center">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
@@ -121,7 +115,6 @@ const Navbar = () => {
                             transition={{ duration: 0.8 }}
                             className='text-[10rem] md:text-[15rem] text-secondary opacity-90 drop-shadow-xl'
                         >
-                            {/* Usamos el mismo icono de libros pero gigante */}
                             <ImBooks />
                         </motion.div>
                     </div>
